@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css-site.css"type="text/css">
 	<meta name="decription" content="....">
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-with;initial-scale=1.0">
 	
 	
   </head>
