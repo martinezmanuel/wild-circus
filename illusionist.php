@@ -1,8 +1,8 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta content="text/html; charset=utf-8" http-equiv="content-type">
-    <title>Homepage </title>
+    <title>Illusionist </title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="css-site.css"type="text/css">
 	<meta name="decription" content="....">
