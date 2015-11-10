@@ -24,7 +24,7 @@ if(!array_key_exists('message', $_POST) || $_POST['message'] == '') {
   $headers  = 'MIME-Version: 1.0' . "\r\n";
   $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
   $headers .= 'FROM:' . htmlspecialchars($_POST['email']);
-  $to = 'postmaster@integration-wild-code-school.nhvs.fr'; 
+  $destinataire = 'postmaster@integration-wild-code-school.nhvs.fr';
   $subject = 'Message send by' . htmlspecialchars($_POST['name']) .' - <i>' . htmlspecialchars($_POST['email']) .'</i>';
   $message_content = '
   <table>
