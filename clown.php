@@ -7,23 +7,15 @@
     <link rel="stylesheet" href="style.css"type="text/css">
 	<meta name="decription" content="....">
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-with;initial-scale=1.0">
+	
 	
 	
   </head>
   <body>
   <div id="site">
-  <?php include("header.php");/*inclure le header dans toutes les pages*/ ?>
+  <?php include("header.php"); ?>
   <header id="header">
-  <nav>
-	<ul id="main-nav" class="clearfix">
-	<li><a href="index.php">Home Page</a></li>
-	<li><a href="elephant.php">Elephant</a></li>
-	<li><a href="lion.php">Lion</a></li>
-	<li><a href="illusionist.php">Illusionist</a></li>
-	<li><a href="clown.php">Clown</a></li>
-	</ul>
-	</nav>
+   <?php include("menu.php"); ?>
 	
 	
   </header>
@@ -33,12 +25,12 @@
    <div id="text">
    <h2>The clowns</h2>
    <p>Our three clowns come from Russia.</p>
-   <p>They will make you laught a lot.But be carrefull perhaps they will surprise you by doing things with you. </p>
+   <p>They will make you laught a lot.</p><p>But be carrefull perhaps they will surprise you</p><p> by doing things with you. </p>
    <p>Sometime they are a little bit factious.</p>
  
    </div>
-   <footer>
-   </footer>
+  <footer>
+  </footer>
    </div>
   </body>
 </html>
