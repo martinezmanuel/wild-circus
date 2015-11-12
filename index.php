@@ -5,7 +5,7 @@
     <title>Homepage </title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css"type="text/css">
-	<meta name="decription" content="circus,fun,intertainement,show,wild circus">
+	<meta name="decription" content="circus,fun,intertainement,show,wild circus,lion,clown,illusionist">
 	<meta charset="utf-8">
 
 	
