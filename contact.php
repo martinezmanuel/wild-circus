@@ -37,7 +37,7 @@
       </li>
 		<li>
 		<label for="inputmessage">Message</label>
-  <textarea required id="inputmessage" name="message" class="form-control"><?php echo isset($_SESSION['inputs']['message'])? $_SESSION['inputs']['message'] : ''; ?></textarea>
+  <textarea rows="4" cols="16" required id="inputmessage" name="message" class="form-control"><?php echo isset($_SESSION['inputs']['message'])? $_SESSION['inputs']['message'] : ''; ?></textarea>
 	  
 		<P><input type="submit" value="Send">
 		<input type="reset" value="Clear"></p>

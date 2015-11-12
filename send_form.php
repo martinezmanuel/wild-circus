@@ -1,48 +1,47 @@
 <?php
-session_start();
-// $errors = [];
-  $errors = array(); 
-if(!array_key_exists('name', $_POST) || $_POST['name'] == '') {
-  $errors ['name'] = "You did'nt put your name";
-  }
-    if(array_key_exists('country', $_POST)) {// 
-  $errors ['country'] = "You didn't put your country";
-  }
-if(!array_key_exists('email', $_POST) || $_POST['email'] == '' || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-  $errors ['mail'] = "you did'nt put your email";
-  }
-if(!array_key_exists('message', $_POST) || $_POST['message'] == '') {
-  $errors ['message'] = "You didn't put a message";
-  }
+$errors = '';
+$myemail = 'postmaster@integration-wild-code-school.nhvs.fr';
+if(empty($_POST['name'])  || 
+   empty($_POST['country'])||
+   empty($_POST['email']) || 
+   empty($_POST['message']))
+{
+    $errors .= "\n Error: all fields are required";
+}
+ 
+$name = $_POST['name']; 
+$country = $_POST['country'];
+$email_address = $_POST['email']; 
+$message = $_POST['message']; 
+ 
+if (!preg_match(
+"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
+$email_address))
+{
+    $errors .= "\n Error: Invalid email address";
+}if( empty($errors))
+ 
+{
+ 
+$to = $myemail;
+ 
+$email_subject = "Contact form submission: $name";
+ 
+$email_body = "You have received a new message. ".
+ 
+" Here are the details:\n Name: $name \n Country \n $country ".
+ 
+"Email: $email_address\n Message \n $message";
+ 
+$headers = "From: $myemail\n";
+ 
+$headers .= "Reply-To: $email_address";
+ 
+mail($to,$email_subject,$email_body,$headers);
+ 
 
-  if(!empty($errors)){ 
-  $_SESSION['errors'] = $errors;
-  $_SESSION['inputs'] = $_POST;
-  header('Location: contact.php');
-  }else{
-  $_SESSION['success'] = 1;
-  $headers  = 'MIME-Version: 1.0' . "\r\n";
-  $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-  $headers .= 'FROM:' . htmlspecialchars($_POST['email']);
-  $destinataire = 'postmaster@integration-wild-code-school.nhvs.fr';
-  $subject = 'Message send by' . htmlspecialchars($_POST['name']) .' - <i>' . htmlspecialchars($_POST['email']) .'</i>';
-  $message_content = '
-  <table>
-  <tr>
-  <td><b>Who send you a mail:</b></td>
-  </tr>
-  <tr>
-  <td>'. $subject . '</td>
-  </tr>
-  <tr>
-  <td><b>What in the mail:</b></td>
-  </tr>
-  <tr>
-  <td>'. htmlspecialchars($_POST['message']) .'</td>
-  </tr>
-  </table>
-  ';
-mail($to, $subject, $message_content, $headers);
-  header('Location: contact.php');
-  }
+ 
+header('Location: contact.php');
+ 
+}
   ?>
