@@ -24,7 +24,7 @@ body {background: #FF5B2B center no-repeat;
 	}	
 	h2{text-align:center;
 	font-size:30px;
-	color:#DB0B32;
+	color:#F7FF3C;
 	}	
 	
 #site {width:980px;
@@ -92,10 +92,8 @@ float: right;
 }
 
 #contact ol li {
-  background: #b9cf6a;
-  background: rgba(255,255,255,.3);
-  border-color: #e3ebc3;
-  border-color: rgba(255,255,255,.6);
+  background: #FFFF00;
+  border-color: #ED7F10;
   border-style: solid;
   border-width: 2px;
   -moz-border-radius: 5px;
