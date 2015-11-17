@@ -1,6 +1,6 @@
 <?php
 $errors = '';
-$myemail = 'postmaster@integration-wild-code-school.nhvs.fr';
+$myemail = 'martinez-manuel@neuf.fr';
 if(empty($_POST['name'])  || 
    empty($_POST['country'])||
    empty($_POST['email']) || 

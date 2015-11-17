@@ -18,8 +18,10 @@
    <?php include("menu.php"); ?>
   </header>
    <div id="content">
+   <img src="image/contact2.jpg"  />
    </div>
    <div id="contact">
+   <h2>Contact Us</h2>
    <form action="send_form.php" method="post" id="contact">
 		
     <ol>

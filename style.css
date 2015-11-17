@@ -87,8 +87,8 @@ float: right;
 
 #contact {margin: 30px 0 30px;
 padding: 20px 35px;
-width: 550px;
-float: right;
+width: 250px;
+float: left;
 }
 
 #contact ol li {
@@ -109,4 +109,4 @@ float: right;
 #contact label {
   float: left;
   font-size: 13px;
-  width: 140px;]
+  width: 100px;]
